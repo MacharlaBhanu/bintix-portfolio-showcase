@@ -82,7 +82,7 @@ const Hero = () => {
               <img
                 src={profileImage}
                 alt="Bhanu Macharla"
-                className="relative w-80 h-80 md:w-96 md:h-96 object-cover rounded-full border-4 border-primary/30 shadow-2xl glow-effect"
+                className="relative w-80 h-80 md:w-96 md:h-96 object-cover object-[center_20%] rounded-full border-4 border-primary/30 shadow-2xl glow-effect"
               />
             </div>
           </div>
