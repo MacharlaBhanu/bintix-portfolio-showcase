@@ -2,6 +2,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import customerAppImage from "@/assets/customer-app.png";
+import bintelligenceImage from "@/assets/bintelligence.png";
+import binsightsImage from "@/assets/binsights.png";
 
 const Projects = () => {
   const bintixProjects = [
@@ -10,21 +13,24 @@ const Projects = () => {
       description: "Master admin application for BINTIX with custom pagination, enhanced text boxes, clickable functionality, infinite scrolling in MUI Data Grid, image grids, and extensive UI improvements.",
       link: "https://uatmasterv2.bintix.com/",
       technologies: ["React.js", "Node.js", "MongoDB", "MUI Data Grid", "CSS"],
-      type: "Professional"
+      type: "Professional",
+      image: customerAppImage
     },
     {
-      title: "GCF Master V2",
+      title: "GCF Master V2 - BINTELLIGENCE",
       description: "Global Configuration Framework master application with advanced data management features and responsive UI design.",
       link: "https://uatgcfmasterv2.bintix.com/",
       technologies: ["React.js", "Node.js", "Sequelize", "MongoDB"],
-      type: "Professional"
+      type: "Professional",
+      image: bintelligenceImage
     },
     {
-      title: "WVI Master V2",
+      title: "WVI Master V2 - BINSIGHTS",
       description: "Web Visualization Interface master application featuring real-time data updates and enhanced user experience.",
       link: "https://uatwvimasterv2.bintix.com/",
       technologies: ["React.js", "Express", "MongoDB", "Node.js"],
-      type: "Professional"
+      type: "Professional",
+      image: binsightsImage
     }
   ];
 
@@ -73,6 +79,13 @@ const Projects = () => {
                       {project.type}
                     </Badge>
                   </div>
+                  {project.image && (
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="w-full h-40 object-cover rounded-md mb-4"
+                    />
+                  )}
                   <CardTitle className="text-xl group-hover:text-primary transition-colors">
                     {project.title}
                   </CardTitle>
