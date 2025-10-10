@@ -1,13 +1,19 @@
+import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { ExternalLink, Github, X } from "lucide-react";
 import customerAppImage from "@/assets/customer-app.png";
 import uatImage from "@/assets/uat.jpg";
 import bintelligenceImage from "@/assets/bintelligence.png";
 import binsightsImage from "@/assets/binsights.png";
+import gcfImage from "@/assets/gcf.png";
+import wviImage from "@/assets/wvi.png";
 
 const Projects = () => {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; title: string } | null>(null);
+
   const bintixProjects = [
     {
       title: "UAT Master V2",
@@ -22,14 +28,16 @@ const Projects = () => {
       description: "Global Configuration Framework master application with advanced data management features and responsive UI design.",
       link: "https://uatgcfmasterv2.bintix.com/",
       technologies: ["React.js", "Node.js", "Sequelize", "MongoDB"],
-      type: "Professional"
+      type: "Professional",
+      image: gcfImage
     },
     {
       title: "WVI Master V2",
       description: "Web Visualization Interface master application featuring real-time data updates and enhanced user experience.",
       link: "https://uatwvimasterv2.bintix.com/",
       technologies: ["React.js", "Express", "MongoDB", "Node.js"],
-      type: "Professional"
+      type: "Professional",
+      image: wviImage
     },
     {
       title: "Customer App",
@@ -75,10 +83,36 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
-      
-      <div className="container mx-auto relative z-10">
+    <>
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-5xl p-0 overflow-hidden border-primary/20">
+          <div className="relative group">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 z-50 p-2 rounded-full bg-background/80 backdrop-blur-sm hover:bg-background transition-all hover:scale-110"
+            >
+              <X className="h-5 w-5" />
+            </button>
+            {selectedImage && (
+              <div className="relative">
+                <img
+                  src={selectedImage.src}
+                  alt={selectedImage.title}
+                  className="w-full h-auto animate-scale-in"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 to-transparent p-6">
+                  <h3 className="text-2xl font-bold text-foreground">{selectedImage.title}</h3>
+                </div>
+              </div>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <section id="projects" className="py-20 px-4 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
+        
+        <div className="container mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-4">
             <span className="gradient-text">Featured Projects</span>
@@ -103,11 +137,21 @@ const Projects = () => {
                     </Badge>
                   </div>
                   {project.image && (
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className="w-full h-40 object-cover rounded-md mb-4"
-                    />
+                    <div 
+                      className="relative overflow-hidden rounded-md mb-4 cursor-pointer group/image h-48"
+                      onClick={() => setSelectedImage({ src: project.image!, title: project.title })}
+                    >
+                      <img 
+                        src={project.image} 
+                        alt={project.title} 
+                        className="w-full h-full object-cover transition-all duration-500 group-hover/image:scale-110 group-hover/image:brightness-75"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div className="text-white text-sm font-medium bg-primary/90 px-4 py-2 rounded-full transform translate-y-4 group-hover/image:translate-y-0 transition-transform duration-300">
+                          Click to enlarge
+                        </div>
+                      </div>
+                    </div>
                   )}
                   <CardTitle className="text-xl group-hover:text-primary transition-colors">
                     {project.title}
@@ -182,6 +226,7 @@ const Projects = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
