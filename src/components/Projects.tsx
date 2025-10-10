@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import uatImage from "@/assets/uat.jpg";
 import customerAppImage from "@/assets/customer-app.png";
 import bintelligenceImage from "@/assets/bintelligence.png";
 import binsightsImage from "@/assets/binsights.png";
@@ -14,21 +15,43 @@ const Projects = () => {
       link: "https://uatmasterv2.bintix.com/",
       technologies: ["React.js", "Node.js", "MongoDB", "MUI Data Grid", "CSS"],
       type: "Professional",
-      image: customerAppImage
+      image: uatImage
     },
     {
-      title: "GCF Master V2 - BINTELLIGENCE",
+      title: "GCF Master V2",
       description: "Global Configuration Framework master application with advanced data management features and responsive UI design.",
       link: "https://uatgcfmasterv2.bintix.com/",
       technologies: ["React.js", "Node.js", "Sequelize", "MongoDB"],
+      type: "Professional"
+    },
+    {
+      title: "WVI Master V2",
+      description: "Web Visualization Interface master application featuring real-time data updates and enhanced user experience.",
+      link: "https://uatwvimasterv2.bintix.com/",
+      technologies: ["React.js", "Express", "MongoDB", "Node.js"],
+      type: "Professional"
+    },
+    {
+      title: "Customer App",
+      description: "Customer-facing application with intuitive interface and seamless user experience for BINTIX platform.",
+      link: "https://uatmasterv2.bintix.com/",
+      technologies: ["React.js", "Node.js", "MongoDB"],
+      type: "Professional",
+      image: customerAppImage
+    },
+    {
+      title: "BINTELLIGENCE",
+      description: "Intelligence dashboard with advanced analytics and data visualization capabilities.",
+      link: "https://uatgcfmasterv2.bintix.com/",
+      technologies: ["React.js", "Node.js", "Analytics"],
       type: "Professional",
       image: bintelligenceImage
     },
     {
-      title: "WVI Master V2 - BINSIGHTS",
-      description: "Web Visualization Interface master application featuring real-time data updates and enhanced user experience.",
+      title: "BINSIGHTS",
+      description: "Insights platform providing comprehensive reporting and business intelligence features.",
       link: "https://uatwvimasterv2.bintix.com/",
-      technologies: ["React.js", "Express", "MongoDB", "Node.js"],
+      technologies: ["React.js", "Node.js", "Business Intelligence"],
       type: "Professional",
       image: binsightsImage
     }
