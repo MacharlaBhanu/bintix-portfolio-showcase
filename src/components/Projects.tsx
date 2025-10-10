@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import customerAppImage from "@/assets/customer-app.png";
+import uatImage from "@/assets/uat.jpg";
 import bintelligenceImage from "@/assets/bintelligence.png";
 import binsightsImage from "@/assets/binsights.png";
 
@@ -13,7 +14,8 @@ const Projects = () => {
       description: "Master admin application for BINTIX with custom pagination, enhanced text boxes, clickable functionality, infinite scrolling in MUI Data Grid, image grids, and extensive UI improvements.",
       link: "https://uatmasterv2.bintix.com/",
       technologies: ["React.js", "Node.js", "MongoDB", "MUI Data Grid", "CSS"],
-      type: "Professional"
+      type: "Professional",
+      image: uatImage
     },
     {
       title: "GCF Master V2",
