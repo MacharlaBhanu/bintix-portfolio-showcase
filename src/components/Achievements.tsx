@@ -16,8 +16,9 @@ const Achievements = () => {
 
   return (
     <section id="achievements" className="py-24 px-4 relative overflow-hidden" ref={sectionRef}>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(250_70%_65%/0.06),_transparent_60%)]" />
-      <div className="floating-orb w-72 h-72 bg-accent/10 top-0 right-10" style={{ animationDuration: '13s' }} />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(260_55%_58%/0.06),_transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(220_80%_55%/0.04),_transparent_50%)]" />
+      <div className="floating-orb w-72 h-72 bg-accent/8 top-0 right-10" style={{ animationDuration: '13s' }} />
 
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-16 section-reveal">
