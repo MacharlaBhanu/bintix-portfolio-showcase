@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="floating-orb w-48 h-48 bg-accent/8 top-1/3 left-1/2" style={{ animationDuration: '14s' }} />
 
       <div className="container mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* Text content */}
           <div className="flex-1 text-center lg:text-left space-y-8 animate-fade-in">
             <span className="inline-block text-secondary font-semibold text-sm tracking-[0.2em] uppercase px-4 py-1.5 rounded-full border border-secondary/30 bg-secondary/5">
