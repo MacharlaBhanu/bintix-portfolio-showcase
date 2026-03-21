@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="floating-orb w-48 h-48 bg-accent/8 top-1/3 left-1/2" style={{ animationDuration: '14s' }} />
 
       <div className="container mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
           {/* Text content */}
           <div className="flex-1 text-center lg:text-left space-y-8 animate-fade-in">
             <span className="inline-block text-secondary font-semibold text-sm tracking-[0.2em] uppercase px-4 py-1.5 rounded-full border border-secondary/30 bg-secondary/5">
@@ -75,17 +75,15 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Profile image — right aligned */}
-          <div className="flex-shrink-0 flex items-center justify-end animate-fade-in" style={{ animationDelay: '200ms' }}>
-            <div className="relative flex items-center justify-center">
-              {/* Glow ring */}
-              <div className="absolute -inset-6 rounded-2xl bg-gradient-to-br from-primary/20 via-secondary/15 to-accent/10 blur-2xl" style={{ animation: 'subtle-pulse 4s ease-in-out infinite' }} />
-              {/* Decorative border */}
+          {/* Profile image — top right */}
+          <div className="flex-shrink-0 lg:mt-2 animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <div className="relative">
+              <div className="absolute -inset-5 rounded-2xl bg-gradient-to-br from-primary/20 via-secondary/15 to-accent/10 blur-2xl" style={{ animation: 'subtle-pulse 4s ease-in-out infinite' }} />
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-primary/40 via-secondary/30 to-accent/20" />
               <img
                 src={profileImage}
                 alt="Bhanu Macharla"
-                className="relative w-[160px] h-[210px] md:w-[185px] md:h-[245px] object-contain rounded-2xl shadow-2xl bg-card"
+                className="relative w-[150px] h-[195px] md:w-[170px] md:h-[220px] object-contain rounded-2xl shadow-2xl bg-card"
               />
             </div>
           </div>
