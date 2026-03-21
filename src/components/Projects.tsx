@@ -51,9 +51,9 @@ const Projects = () => {
       </Dialog>
 
       <section id="projects" className="py-24 px-4 relative overflow-hidden" ref={sectionRef}>
-        {/* Background */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(217_91%_60%/0.06),_transparent_70%)]" />
-        <div className="floating-orb w-80 h-80 bg-primary/10 top-20 -right-40" style={{ animationDuration: '12s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(220_80%_55%/0.05),_transparent_70%)]" />
+        <div className="floating-orb w-80 h-80 bg-primary/8 top-20 -right-40" style={{ animationDuration: '12s' }} />
+        <div className="floating-orb w-56 h-56 bg-accent/6 bottom-40 -left-20" style={{ animation: 'float-drift-alt 15s ease-in-out infinite' }} />
 
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-16 section-reveal">
@@ -67,7 +67,7 @@ const Projects = () => {
 
           <div className="mb-20 section-reveal">
             <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
-              <span className="w-1.5 h-8 bg-primary rounded-full" />
+              <span className="w-1.5 h-8 bg-gradient-to-b from-primary to-secondary rounded-full" />
               BINTIX Projects
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -84,7 +84,7 @@ const Projects = () => {
                       >
                         <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-all duration-500 group-hover/image:scale-105" />
                         <div className="absolute inset-0 bg-primary/0 group-hover/image:bg-primary/10 transition-colors duration-300 flex items-center justify-center">
-                          <span className="text-white text-sm font-medium bg-background/80 backdrop-blur-sm px-4 py-2 rounded-full opacity-0 group-hover/image:opacity-100 translate-y-2 group-hover/image:translate-y-0 transition-all duration-300">
+                          <span className="text-foreground text-sm font-medium bg-background/80 backdrop-blur-sm px-4 py-2 rounded-full opacity-0 group-hover/image:opacity-100 translate-y-2 group-hover/image:translate-y-0 transition-all duration-300">
                             Click to enlarge
                           </span>
                         </div>
@@ -111,7 +111,7 @@ const Projects = () => {
 
           <div className="section-reveal">
             <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
-              <span className="w-1.5 h-8 bg-secondary rounded-full" />
+              <span className="w-1.5 h-8 bg-gradient-to-b from-secondary to-accent rounded-full" />
               Personal Projects
             </h3>
             <div className="grid md:grid-cols-2 gap-6">

@@ -5,17 +5,18 @@ import profileImage from "@/assets/profile.jpg";
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-20">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_hsl(217_91%_60%/0.15),_transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_hsl(199_89%_48%/0.1),_transparent_50%)]" />
+      {/* Layered gradient background */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,_hsl(220_80%_55%/0.18),_transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_80%,_hsl(190_75%_45%/0.1),_transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_40%_at_10%_60%,_hsl(260_55%_58%/0.08),_transparent_50%)]" />
 
       {/* Floating orbs */}
-      <div className="floating-orb w-72 h-72 bg-primary/20 top-20 -left-20" style={{ animationDuration: '10s' }} />
-      <div className="floating-orb w-96 h-96 bg-secondary/15 -bottom-32 right-0" style={{ animation: 'float-drift-alt 12s ease-in-out infinite' }} />
-      <div className="floating-orb w-48 h-48 bg-accent/10 top-1/2 left-1/3" style={{ animationDuration: '14s' }} />
+      <div className="floating-orb w-80 h-80 bg-primary/15 top-10 -left-24" style={{ animationDuration: '10s' }} />
+      <div className="floating-orb w-96 h-96 bg-secondary/10 -bottom-40 right-0" style={{ animation: 'float-drift-alt 12s ease-in-out infinite' }} />
+      <div className="floating-orb w-48 h-48 bg-accent/8 top-1/3 left-1/2" style={{ animationDuration: '14s' }} />
 
       <div className="container mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           {/* Text content */}
           <div className="flex-1 text-center lg:text-left space-y-8 animate-fade-in">
             <span className="inline-block text-secondary font-semibold text-sm tracking-[0.2em] uppercase px-4 py-1.5 rounded-full border border-secondary/30 bg-secondary/5">
@@ -66,7 +67,7 @@ const Hero = () => {
                   target={label !== "Email" ? "_blank" : undefined}
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="p-3 rounded-xl bg-card/60 border border-border hover:border-primary/60 hover:bg-primary/10 transition-all duration-300 hover:shadow-[0_0_20px_hsl(217_91%_60%/0.15)] active:scale-95"
+                  className="p-3 rounded-xl bg-card/60 border border-border hover:border-primary/60 hover:bg-primary/10 transition-all duration-300 hover:shadow-[0_0_20px_hsl(220_80%_55%/0.15)] active:scale-95"
                 >
                   <Icon className="h-5 w-5" />
                 </a>
@@ -74,14 +75,17 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Profile image */}
-          <div className="flex-1 flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '200ms' }}>
-            <div className="relative">
-              <div className="absolute -inset-8 bg-gradient-to-br from-primary/25 to-secondary/25 rounded-full blur-3xl" style={{ animation: 'subtle-pulse 4s ease-in-out infinite' }} />
+          {/* Profile image — centered and well-aligned */}
+          <div className="flex-shrink-0 flex items-center justify-center animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <div className="relative flex items-center justify-center">
+              {/* Glow ring */}
+              <div className="absolute -inset-6 rounded-2xl bg-gradient-to-br from-primary/20 via-secondary/15 to-accent/10 blur-2xl" style={{ animation: 'subtle-pulse 4s ease-in-out infinite' }} />
+              {/* Decorative border */}
+              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-primary/40 via-secondary/30 to-accent/20" />
               <img
                 src={profileImage}
                 alt="Bhanu Macharla"
-                className="relative w-[150px] h-[180px] md:w-[175px] md:h-[215px] object-cover rounded-2xl border-2 border-primary/30 shadow-2xl glow-effect"
+                className="relative w-[160px] h-[200px] md:w-[180px] md:h-[225px] object-cover object-top rounded-2xl shadow-2xl"
               />
             </div>
           </div>

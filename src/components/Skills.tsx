@@ -16,8 +16,9 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-24 px-4 relative overflow-hidden" ref={sectionRef}>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(199_89%_48%/0.06),_transparent_60%)]" />
-      <div className="floating-orb w-64 h-64 bg-secondary/10 bottom-10 -left-32" style={{ animation: 'float-drift-alt 11s ease-in-out infinite' }} />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_hsl(190_75%_45%/0.06),_transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(260_55%_58%/0.04),_transparent_50%)]" />
+      <div className="floating-orb w-64 h-64 bg-secondary/8 bottom-10 -left-32" style={{ animation: 'float-drift-alt 11s ease-in-out infinite' }} />
 
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-16 section-reveal">
