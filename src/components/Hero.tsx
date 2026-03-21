@@ -75,8 +75,8 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Profile image — centered and well-aligned */}
-          <div className="flex-shrink-0 flex items-center justify-center animate-fade-in" style={{ animationDelay: '200ms' }}>
+          {/* Profile image — right aligned */}
+          <div className="flex-shrink-0 flex items-center justify-end animate-fade-in" style={{ animationDelay: '200ms' }}>
             <div className="relative flex items-center justify-center">
               {/* Glow ring */}
               <div className="absolute -inset-6 rounded-2xl bg-gradient-to-br from-primary/20 via-secondary/15 to-accent/10 blur-2xl" style={{ animation: 'subtle-pulse 4s ease-in-out infinite' }} />
@@ -85,7 +85,7 @@ const Hero = () => {
               <img
                 src={profileImage}
                 alt="Bhanu Macharla"
-                className="relative w-[160px] h-[200px] md:w-[180px] md:h-[225px] object-cover object-top rounded-2xl shadow-2xl"
+                className="relative w-[160px] h-[210px] md:w-[185px] md:h-[245px] object-contain rounded-2xl shadow-2xl bg-card"
               />
             </div>
           </div>
